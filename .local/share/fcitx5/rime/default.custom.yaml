@@ -1,0 +1,15 @@
+patch:
+  schema_list:
+    - schema: luna_pinyin_simp
+  switcher:
+    hotkeys:
+      - "Control+Shift+grave"
+  ascii_composer/good_old_caps_lock: true
+  ascii_composer/switch_key:
+      Caps_Lock: clear      # clear表示按下此键后已输入的字符清除，同时rime输入状态切换为英文
+      Shift_L: commit_code  # 提交代码，就是将已输入的字符上屏，同时输入法切换为英文
+      Shift_R: inline_ascii # 插入字符，就是已输入的字符为上屏前，按此键后输入法转为英文，可以接着输入，回车键再上屏
+      Control_L: noop       # 这个键在输入法里不会有任何操作
+      Control_R: noop       # 这个键在输入法里不会有任何操作
+
+  

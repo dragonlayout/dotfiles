@@ -1,0 +1,115 @@
+config:
+  backup: true
+  banner: true
+  chmod_on_import: true
+  create: true
+  dotpath: ./
+  keepdot: true
+  link_dotfile_default: nolink
+  link_on_import: nolink
+  longkey: false
+  showdiff: true
+dotfiles:
+  f_config:
+    src: .ssh/config
+    dst: ~/.ssh/config
+    chmod: '644'
+  f_switch-maven-settings:
+    src: .local/bin/switch-maven-settings
+    dst: ~/.local/bin/switch-maven-settings
+    chmod: '755'
+  d_cn_dicts:
+    src: .local/share/fcitx5/rime/cn_dicts
+    dst: ~/.local/share/fcitx5/rime/cn_dicts
+    chmod: '755'
+  f_default.custom.yaml:
+    src: .local/share/fcitx5/rime/default.custom.yaml
+    dst: ~/.local/share/fcitx5/rime/default.custom.yaml
+    chmod: '644'
+  f_luna_pinyin_simp.custom.yaml:
+    src: .local/share/fcitx5/rime/luna_pinyin_simp.custom.yaml
+    dst: ~/.local/share/fcitx5/rime/luna_pinyin_simp.custom.yaml
+    chmod: '644'
+  f_luna_pinyin_simp.dict.yaml:
+    src: .local/share/fcitx5/rime/luna_pinyin_simp.dict.yaml
+    dst: ~/.local/share/fcitx5/rime/luna_pinyin_simp.dict.yaml
+    chmod: '644'
+  f_bspwmrc:
+    src: .config/bspwm/bspwmrc
+    dst: ~/.config/bspwm/bspwmrc
+    chmod: '755'
+  f_sxhkdrc:
+    src: .config/sxhkd/sxhkdrc
+    dst: ~/.config/sxhkd/sxhkdrc
+    chmod: '644'
+  f_fonts.conf:
+    src: .config/fontconfig/fonts.conf
+    dst: ~/.config/fontconfig/fonts.conf
+    chmod: '644'
+  f_init.vim:
+    src: .config/nvim/init.vim
+    dst: ~/.config/nvim/init.vim
+    chmod: '644'
+  d_rofi:
+    src: .config/rofi
+    dst: ~/.config/rofi
+    chmod: '755'
+  f_gitconfig:
+    src: .gitconfig
+    dst: ~/.gitconfig
+    chmod: '644'
+  f_aliyun_settings.xml:
+    src: .m2/aliyun_settings.xml
+    dst: ~/.m2/aliyun_settings.xml
+    chmod: '644'
+  f_default_settings.xml:
+    src: .m2/default_settings.xml
+    dst: ~/.m2/default_settings.xml
+    chmod: '644'
+  f_xinitrc:
+    src: .xinitrc
+    dst: ~/.xinitrc
+    chmod: '644'
+  f_xresources:
+    src: .Xresources
+    dst: ~/.Xresources
+    chmod: '644'
+  f_zprofile:
+    src: .zprofile
+    dst: ~/.zprofile
+    chmod: '644'
+  f_zshrc:
+    src: .zshrc
+    dst: ~/.zshrc
+    chmod: '644'
+  f_config.ini:
+    src: .config/polybar/config.ini
+    dst: ~/.config/polybar/config.ini
+    chmod: '644'
+  f_launch.sh:
+    src: .config/polybar/launch.sh
+    dst: ~/.config/polybar/launch.sh
+    chmod: '755'
+profiles:
+  archlinux:
+    dotfiles:
+    - f_config
+    - f_switch-maven-settings
+    - d_cn_dicts
+    - f_default.custom.yaml
+    - f_luna_pinyin_simp.custom.yaml
+    - f_luna_pinyin_simp.dict.yaml
+    - f_bspwmrc
+    - f_sxhkdrc
+    - f_fonts.conf
+    - f_init.vim
+    - d_rofi
+    - f_gitconfig
+    - f_aliyun_settings.xml
+    - f_default_settings.xml
+    - f_xinitrc
+    - f_xresources
+    - f_zprofile
+    - f_zshrc
+    - f_config.ini
+    - f_launch.sh

@@ -1,0 +1,41 @@
+#!/bin/bash
+### Please set these properties for yourself
+base_dir=~/.m2
+default_settings=default_settings.xml
+aliyun_settings=aliyun_settings.xml
+work_new_settings=work_meapdevops.airchina.com.cn_settings.xml
+work_old_settings=work_10.9.248.201_settings.xml
+
+
+PS3='Please enter the number of your choice: '
+options=("default" "aliyun" "work_10.9.248.201" "work_meapdevops.airchina.com.cn" "quit")
+select opt in "${options[@]}"
+do
+    case $opt in
+        "default")
+        ln -sfn ${base_dir}/${default_settings} ${base_dir}/settings.xml
+            echo "Switched setting.xml to default!"
+            break
+            ;;
+        "aliyun")
+        ln -sfn ${base_dir}/${aliyun_settings} ${base_dir}/settings.xml
+            echo "Switched setting.xml to aliyun!"
+            break
+            ;;
+        "work_10.9.248.201")
+        ln -sfn ${base_dir}/${work_old_settings} ${base_dir}/settings.xml
+            echo "Switched setting.xml to work_10.9.248.201!"
+            break
+            ;;
+        "work_meapdevops.airchina.com.cn")
+        ln -sfn ${base_dir}/${work_new_settings} ${base_dir}/settings.xml
+            echo "Switched setting.xml to work_meapdevops.airchina.com.cn!"
+            break
+            ;;
+        "quit")
+            break
+            ;;
+        *) echo invalid option;;
+    esac
+done
+
